@@ -1,0 +1,7 @@
+/* 组件样式 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+
+}

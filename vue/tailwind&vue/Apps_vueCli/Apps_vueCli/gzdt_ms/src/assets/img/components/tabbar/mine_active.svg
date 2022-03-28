@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="32px" viewBox="0 0 30 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>编组 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-4.8%" y="-19.8%" width="109.6%" height="144.4%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="改版迭代备份" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="决策管控首页" transform="translate(-304.000000, -738.000000)" fill="#B6282C">
+            <g id="导航栏" filter="url(#filter-1)" transform="translate(0.000000, 732.000000)">
+                <g id="编组-3" transform="translate(308.000000, 8.000000)">
+                    <g id="编组" fill-rule="nonzero">
+                        <path d="M17.305894,14.9328 C19.8980353,14.9328 22,16.9632 22,19.4664 L22,20.1144 C22,22.2612 20.1974536,24 17.9771705,24 L4.02282955,24 C1.80013171,24 0,22.2588 0,20.1144 L0,19.4664 C0,16.9632 2.09954999,14.9328 4.69410603,14.9328 L17.305894,14.9328 L17.305894,14.9328 Z M17.305894,16.5336 L4.69531336,16.5336 C2.97848754,16.5336 1.60816595,17.8536 1.60937249,19.4664 L1.60937249,20.1144 C1.60937249,21.3648 2.67906926,22.3944 4.02403688,22.3944 L17.9771705,22.3944 C19.3197234,22.3944 20.391834,21.36 20.391834,20.1144 L20.391834,19.4664 C20.391834,17.8572 19.0203051,16.5336 17.3071013,16.5336 L17.305894,16.5336 Z M17.7079355,0 L17.7079355,6.6672 C17.7079355,10.3493929 14.7046905,13.3344 11,13.3344 C7.29530954,13.3344 4.29206454,10.3493929 4.29206454,6.6672 C4.29206454,2.98500712 7.29530954,0 11,0 L17.7079355,0 Z M16.0973548,1.59959986 L11,1.59959986 C9.64820847,1.59928169 8.35167322,2.13279463 7.39569903,3.0827384 C6.43972485,4.03268217 5.90264515,5.3212175 5.90264515,6.6648 C5.90264515,9.46289546 8.18480865,11.7312 11,11.7312 C13.8151913,11.7312 16.0973548,9.46289546 16.0973548,6.6648 L16.0973548,1.59959986 Z" id="形状"></path>
+                    </g>
+                    <rect id="矩形" x="1" y="16" width="20" height="7" rx="3"></rect>
+                    <polygon id="路径-7" points="16.5467504 0.76921839 10.0019649 0.76921839 6.65881597 2.5802592 5.03661289 5.35368851 5.03661289 7.64544501 6.65881597 10.4101883 8.80121652 12 11.7445849 12.5803888 14.5126974 11.7312 16.5467504 9.03856289"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,109 @@
+/* 主题样式 */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  /* 默认样式 */
+  :root{
+    /* 背景颜色相关变量 */
+    --color-bg-primary: #ff73b3; /*主要背景色*/
+    --color-bg-secondary: #6f72b9;/*次要背景色*/
+    --color-bg-base: #fff;/*基础背景色*/
+    --color-bg-hover:;/*鼠标悬浮后背景色*/
+    --color-bg-accent:;/*鼠标点击后背景色*/
+    --color-bg-error:;/*出错背景色*/
+    --color-bg-primary-o: #5255ac;/*主要背景色的相反色*/
+    /* 背景颜色相关变量 */
+
+    /* 字体颜色相关变量 */
+    --color-text-primary: #fff;/*主要字体色*/
+    --color-text-secondary: #44467b;/*次要字体色*/
+    --color-text-base: #373737;/*基础字体色*/
+    --color-text-hover:;/*鼠标悬浮后字体色*/
+    --color-text-accent:;/*鼠标点击后字体色*/
+    --color-text-error:;/*出错字体色*/
+    --color-text-primary-o: #5255ac;/*主要字体色的相反色*/
+    --color-text-base-soft: #6a6a6a;
+  
+    /* 字体颜色相关变量 */
+  }
+  
+  /* 默认样式 */
+  /* 自定义样式 */
+  .theme-red{
+
+  }
+  .theme-startup {
+    --color-bg-primary: #ff73b3;
+    --color-bg-secondary: #6f72b9;
+    --color-bg-base: #fff;
+    --color-bg-inverse: #5255ac;
+
+    --color-text-primary: #fff;
+    --color-text-secondary: #44467b;
+    --color-text-base: #373737;
+    --color-text-base-soft: #6a6a6a;
+    --color-text-inverse: #fff;
+    --color-text-inverse-soft: rgba(255, 255, 255, 0.7);
+  
+
+    --font-display: Futura, Trebuchet MS, Arial, sans-serif;
+    --font-body: Futura, Trebuchet MS, Arial, sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-display: 600;
+    --font-weight-btn: 600;
+
+    --rounded-btn: 9999px;
+  }
+
+  .theme-boring {
+    --color-bg-primary: #0252cc;
+    --color-bg-secondary: #ffc402;
+    --color-bg-base: #fff;
+    --color-bg-inverse: #fff;
+
+    --color-text-primary: #fff;
+    --color-text-secondary: #755f17;
+    --color-text-base: #444;
+    --color-text-base-soft: #999;
+    --color-text-inverse: #444;
+    --color-text-inverse-soft: #999;
+
+    --font-display: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-body: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-display: 400;
+    --font-weight-btn: 600;
+
+    --rounded-btn: 0.25rem;
+  }
+
+  .theme-elegant {
+    --color-bg-primary: #c0b283;
+    --color-bg-secondary: #dcd0c0;
+    --color-bg-base: #f4f4f4;
+    --color-bg-inverse: #373737;
+
+    --color-text-primary: #fff;
+    --color-text-secondary: #927e7e;
+    --color-text-base: #373737;
+    --color-text-base-soft: #6a6a6a;
+    --color-text-inverse: #fff;
+    --color-text-inverse-soft: #bbb;
+
+    --font-display: Georgia, Times, "Times New Roman", serif;
+    --font-body: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+      "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana,
+      "Verdana Ref", sans-serif;
+
+    --font-weight-normal: 400;
+    --font-weight-display: 400;
+    --font-weight-btn: 600;
+
+    --rounded-btn: 0;
+  }
+   /* 自定义样式 */
+};
+
