@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>canvas</title>
+	</head>
+	<body>
+		<canvas id="canvas" width="600px" height="600px">浏览器不支持canvas</canvas>
+		<script>
+			var canvas = document.getElementById('canvas');
+			var ctx = null;
+			if (canvas.getContext) {
+				ctx = canvas.getContext('2d');
+			}
+			// #region线条绘制
+			ctx.beginPath();
+			ctx.moveTo(20, 20);
+			ctx.lineTo(200, 20);
+			ctx.lineWidth = 1.0; // 设置线宽
+			ctx.strokeStyle = '#CC0000'; // 设置线的颜色
+			ctx.stroke(); // 进行线的着色，这时整条线才变得可见
+			// #endregion线条绘制
+			//#region
+			ctx.fillStyle = 'yellow';
+			ctx.fillRect(20, 30, 180, 100);
+			//#endregion线条绘制
+			//#region绘制矩形
+			ctx.fillStyle = 'yellow';
+			ctx.fillRect(20, 30, 180, 100); //实心
+			ctx.strokeRect(320, 40, 200, 100); //空心
+			//	ctx.clearRect(20, 50, 50, 50); //clearRect方法用来清除某个矩形区域的内容。
+			//#endregion绘制矩形
+			// #region绘制文本
+			// 设置字体
+			ctx.font = 'Bold 20px Arial';
+			// 设置对齐方式
+			ctx.textAlign = 'left';
+			// 设置填充颜色
+			ctx.fillStyle = '#008600';
+			// 设置字体内容，以及在画布上的位置
+			ctx.fillText('Hello!', 10, 200);
+			// 绘制空心字
+			ctx.strokeText('Hello!', 10, 240);
+
+			// #endregion绘制文本
+			//
+			ctx.beginPath();
+			ctx.arc(200, 400, 100, 0, Math.PI * 2, false);
+			ctx.fillStyle = '#000000';
+			ctx.fill();
+			// ctx.beginPath();
+			// ctx.arc(50, 400, 50, 0, Math.PI / 2, false);
+			// ctx.lineWidth = 1.0;
+			// ctx.strokeStyle = '#000';
+			// ctx.stroke();
+		</script>
+	</body>
+</html>
