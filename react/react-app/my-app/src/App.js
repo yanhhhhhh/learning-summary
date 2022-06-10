@@ -53,7 +53,7 @@ class App extends React.Component {
   }
 }
  */
-import Parent from './hook/useState01/parent'
+/* import Parent from './hook/useState01/parent'
 function App() {
   return (
     <div className="App">
@@ -61,6 +61,13 @@ function App() {
     </div>
   );
 } 
-
-
+ */
+import AnimateDemo from './hook/useEffect01/animateDemo';
+function App() {
+  return (
+    <div className="App">
+      <AnimateDemo />
+    </div>
+  )
+}
 export default App;
