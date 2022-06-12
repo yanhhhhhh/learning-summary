@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+.container{
+  height: 50px;
+  width: 850px;
+ 
+  background-color: red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.el{
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: aquamarine;
+}
