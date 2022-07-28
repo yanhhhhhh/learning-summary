@@ -1,0 +1,26 @@
+<html>
+ <head>
+ 
+ </head>
+ <body onload="draw();">
+   <canvas id="canvas" width="150" height="150"></canvas>
+   <script type="application/javascript">
+    function draw(color,img1,img2) {
+      var canvas = document.getElementById("canvas");
+      canvas.width = img1.width;
+      canvas.height = img2.height;
+     
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "rgb(200,0,0)";
+        ctx.fillRect (10, 10, 55, 50);
+
+        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
+        ctx.fillRect (30, 30, 55, 50);
+      
+    }
+    var img1= new Image();
+    var img2= new Image();
+  </script>
+ </body>
+</html>
