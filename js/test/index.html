@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="./Cesium/Cesium.js"></script>
+		<title>cesium</title>
+		<style>
+			#view {
+				height: 100vh;
+				width: 100vw;
+				position: relative;
+				margin: 0;
+				padding: 0;
+			}
+			#map {
+				height: 100vh;
+				width: 100vw;
+
+				position: absolute;
+				top: 0;
+				bottom: 0;
+			}
+			.cesium-viewer {
+				width: 100%;
+				height: 100%;
+			}
+			.cesium-viewer-cesiumWidgetContainer {
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="view">
+			<div id="mapContainer"></div>
+		</div>
+
+		<script type="module">
+			// import { CEarth } from './cearth.es.js';
+			// console.log(CEarth);
+			window.CESIUM_BASE_URL = './Cesium';
+			const token =
+				'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI5ZWNjZjA2Mi1jMzk0LTQ4MGEtOTFiMC01ODAwMmFkZmNhZjciLCJpZCI6Nzg4MDUsImlhdCI6MTY0MTU0MTQ4MX0.1JeXA2tlA6qiBxdBMzIqDua0gl_w15RE2NLXRkJbzOM';
+			Cesium.Ion.defaultAccessToken = token;
+			let cgis = new Cesium.Viewer('mapContainer', {
+				// 初始化，去除不需要小部件
+				imageryProvider: new Cesium.OpenStreetMapImageryProvider({
+					url: 'https://a.tile.openstreetmap.org/',
+				}),
+				homeButton: false,
+				fullscreenButton: false, //是否显示全屏
+				infoBox: false,
+				timeline: false, //是否显示时间线控件
+				sceneModePicker: false, //是否显示投影方式控件
+				animation: false, //是否显示动画控件
+				baseLayerPicker: false, //是否显示图层选择控件
+				navigationHelpButton: false, //是否显示帮助信息控件
+				geocoder: false, //是否显示地名查找控件
+				selectionIndicator: false, //用于在所选对象上显示指示器的小部件
+			});
+
+			cgis.token = token;
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<iframe src="http://127.0.0.1:5500/2.html"></iframe>
+		<script>
+			function hello() {
+				console.log("this is 1.html");
+			}
+			var iframe = document.getElementsByTagName("iframe")[0];
+			console.log("contentWindow", iframe.contentWindow);
+			console.log("contentDocument", iframe.contentDocument);
+			// 注意访问方式, 需要在 onload 后才能取到值
+			//console.log(iframe.contentWindow.hello()); // Uncaught TypeError: iframe.contentWindow.hello is not a function
+			iframe.onload = function () {
+				console.log(iframe.contentWindow.hello());
+				//  输出 Location 对象， 依然要在 iframe.onload 中访问
+				console.log("contentWindow.location 🥝", iframe.contentWindow.location);
+			};
+			iframe.contentWindow.location = "http://www.360doc.com";
+		</script>
+	</body>
+</html>

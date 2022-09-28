@@ -7,25 +7,64 @@
 		<title>Document</title>
 	</head>
 	<body>
+		<div id="image"></div>
 		<script>
-			var image = new Image();
-			var context;
-			image.onload = function () {
-				var canvas = document.createElement('canvas');
-				canvas.width = image.width;
-				canvas.height = image.height;
-				canvas.getContext('2d').drawImage(image, 0, 0);
-				// context = canvas.getContext('2d');
+			/* 	function drawCanvas(img1, img2) {
+				//img是图片对象，text是文本字符串，fontsize是字体大小，tx，ty则是绘制文本的位置
+				var canvas = document.createElement('canvas'); //创建canvas标签
+				var ctx = canvas.getContext('2d');
+
+				canvas.width = img1.width + img2.width;
+				canvas.height = img1.height + img2.height;
+				img1.onload = function () {
+					canvas.getContext('2d').drawImage(img1, 0, 0); //绘制图片
+					return canvas;
+				};
+				// img2.onload = function () {
+				// 	canvas.getContext('2d').drawImage(img2, img1.width, img1.height);
+				// 	return canvas;
+				// };
+
+				return canvas;
+			}
+			var image1 = new Image();
+			image1.src = '位置.png';
+			var image2 = new Image();
+			image2.src = 'poi.png';
+
+			const Canvas = drawCanvas(image1, image2);
+			var image3 = new Image();
+
+			image3.src = Canvas.toDataURL('image/png');
+
+			image3.onload = () => {
+				document.body.appendChild(image3);
+			}; */
+			// document.body.appendChild(image3);
+			var image1 = new Image();
+			image1.src = '位置.png';
+			var image2 = new Image();
+			image2.src = 'poi.png';
+
+			var canvas = document.createElement('canvas');
+			var ctx = canvas.getContext('2d');
+			canvas.width = 44;
+			canvas.height = 78 + 7;
+			image1.onload = function () {
+				ctx.drawImage(image1, 11, 0, 22, 28);
+				// ctx.beginPath();
+				// ctx.arc(200, 400, 100, 0, Math.PI * 2, false);
+
 				// 插入页面底部
-				document.body.appendChild(image);
-				var imageData = canvas
-					.getContext('2d')
-					.getImageData(0, 0, canvas.width, canvas.height);
-				console.log(imageData);
+				// document.body.appendChild(image1);
+				image2.onload = function () {
+					ctx.drawImage(image2, 0, 22 + 7, 44, 50);
+					var image3 = new Image();
+					image3.src = canvas.toDataURL('image/png');
+					document.body.appendChild(image3);
+				};
 				return canvas;
 			};
-
-			image.src = 'image.png';
 		</script>
 	</body>
 </html>
