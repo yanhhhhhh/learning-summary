@@ -4,7 +4,6 @@ export default function useMouse() {
 	const x = ref(0);
 	const y = ref(0);
 	const moveCallback = (e: MouseEvent) => {
-		console.log(e);
 		x.value = e.offsetX;
 		y.value = e.offsetY;
 	};
