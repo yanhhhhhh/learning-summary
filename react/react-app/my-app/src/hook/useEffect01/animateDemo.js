@@ -13,6 +13,7 @@ export default function AnimateDemo() {
   useEffect(() => {
     anime01 && animate01();
     anime02 && animate02();
+
   }, [anime01, anime02]);
 
   function animate01() {

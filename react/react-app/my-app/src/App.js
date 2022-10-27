@@ -107,8 +107,8 @@ function App() {
     </div>
   );
 }*/
-
-import AnimateDemo from './hook/useEffect01/animateDemo';
+// useEffect demo 
+/* import AnimateDemo from './hook/useEffect01/animateDemo';
 function App() {
   return (
     <div className="App">
@@ -116,4 +116,16 @@ function App() {
     </div>
   )
 }
+export default App; */
+
+
+import Counter from './hook/Counter/index';
+function App() {
+  return (
+    <div className="App">
+      <Counter />
+    </div>
+  )
+}
 export default App;
+
