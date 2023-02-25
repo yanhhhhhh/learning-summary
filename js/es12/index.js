@@ -1,0 +1,1 @@
+import "./finalizationRegister.js";
