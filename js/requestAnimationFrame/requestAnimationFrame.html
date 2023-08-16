@@ -16,7 +16,10 @@
 				if (start === undefined) {
 					start = timestamp;
 				}
-				const elapsed = start - timestamp; //经过的
+				const elapsed = timestamp - start; //经过的
+				start = timestamp
+				console.log(elapsed)
+				window.requestAnimationFrame(step)
 			}
 			window.requestAnimationFrame(step);
 		</script>
