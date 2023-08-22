@@ -9,3 +9,5 @@ import "./sass/index.scss";
 import "./stylus/index.styl";
 //字体
 import "./css/iconfont.css";
+const result2 = sum(1, 2, 3, 4);
+console.log(result2);

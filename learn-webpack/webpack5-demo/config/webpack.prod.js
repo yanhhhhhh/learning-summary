@@ -1,6 +1,7 @@
 const path = require("path");
+const ESlintWebpackPlugin = require("eslint-webpack-plugin");
 module.exports = {
-  entry: "./src/main.js",
+  entry: "./src/main.js", //相对于当前终端所在文件路径进行拼接
   output: {
     path: path.resolve(__dirname, "../dist"),
     filename: "static/js/main.js",
@@ -45,8 +46,17 @@ module.exports = {
           filename: "static/fonts/[hash:8][ext][query]",
         },
       },
+      {
+        test: /\.js$/,
+        loader: "babel-loader", // 排除node_modules代码不编译
+        exclude: "/node_modules/",
+      },
     ],
   },
-  plugins: [],
+  plugins: [
+    new ESlintWebpackPlugin({
+      context: path.resolve(__dirname, "../src"),
+    }),
+  ],
   mode: "production",
 };
