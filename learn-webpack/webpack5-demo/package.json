@@ -4,9 +4,9 @@
   "description": "",
   "main": "./src/main.js",
   "scripts": {
-    "dev": "npx webpack server --config ./config/webpack.dev.js --mode=development",
+    "dev": "npx webpack server --config ./config/webpack.dev.js",
     "start": "npm run dev",
-    "build": "npx webpack --config ./config/webpack.prod.js --mode=production",
+    "build": "npx webpack --config ./config/webpack.prod.js ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +19,14 @@
   ],
   "devDependencies": {
     "@types/node": "^20.5.1",
+    "css-loader": "^6.8.1",
+    "less": "^4.2.0",
+    "less-loader": "^11.1.3",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.1.3",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"

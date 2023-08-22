@@ -6,7 +6,12 @@ module.exports = {
     filename: "js/main.js",
   },
   module: {
-    rules: [],
+    rules: [
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
+    ],
   },
   plugins: [],
   devServer: {
