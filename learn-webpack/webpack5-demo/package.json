@@ -1,0 +1,26 @@
+{
+  "name": "webpack5-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/main.js",
+  "scripts": {
+    "dev": "npx webpack server --config ./config/webpack.dev.js --mode=development",
+    "start": "npm run dev",
+    "build": "npx webpack --config ./config/webpack.prod.js --mode=production",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "not dead"
+  ],
+  "devDependencies": {
+    "@types/node": "^20.5.1",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  }
+}
