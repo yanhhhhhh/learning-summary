@@ -1,5 +1,23 @@
 const path = require("path");
 const ESlintWebpackPlugin = require("eslint-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const getStyleLoaders = (preProcessor) => {
+  return [
+    MiniCssExtractPlugin.loader,
+    "css-loader",
+    {
+      loader: "postcss-loader",
+      options: {
+        postcssOptions: {
+          plugins: ["postcss-preset-env"],
+        },
+      },
+    },
+    preProcessor,
+  ].filter(Boolean);
+};
 module.exports = {
   entry: "./src/main.js", //相对于当前终端所在文件路径进行拼接
   output: {
@@ -11,19 +29,19 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: getStyleLoaders(),
       },
       {
         test: /\.less$/,
-        use: ["style-loader", "css-loader", "less-loader"],
+        use: getStyleLoaders("less-loader"),
       },
       {
         test: /\.s[ac]ss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: getStyleLoaders("sass-loader"),
       },
       {
         test: /\.styl/,
-        use: ["style-loader", "css-loader", "stylus-loader"],
+        use: getStyleLoaders("stylus-loader"),
       },
       {
         test: /\.(png|jpe?g|gif|webp)$/,
@@ -57,6 +75,15 @@ module.exports = {
     new ESlintWebpackPlugin({
       context: path.resolve(__dirname, "../src"),
     }),
+    new HtmlWebpackPlugin({
+      // 以 public/index.html 为模板创建文件
+      // 新的html文件有两个特点：1. 内容和源文件一致 2. 自动引入打包生成的js等资源
+      template: path.resolve(__dirname, "../public/index.html"),
+    }),
+    new MiniCssExtractPlugin({
+      filename: "static/css/main.css",
+    }),
+    new CssMinimizerPlugin(), //css压缩
   ],
   mode: "production",
 };
