@@ -38,8 +38,9 @@ module.exports = {
         },
       },
       {
-        test: /\.(ttf|woff2?)$/,
+        test: /\.(ttf|woff2?|map4|map3|avi)$/,
         type: "asset/resource",
+
         generator: {
           filename: "static/fonts/[hash:8][ext][query]",
         },
