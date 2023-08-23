@@ -1,0 +1,13 @@
+<svg width="300" height="300" vision="1.1" xmlns="http://www.w3.org/2000/svg">
+  <rect x="10" y="10" width="30" height="30" stroke="black" fill="transparent" stroke-width="5" />
+  <rect width="30" height="30" x="50" y="10" rx="2" ry="2" stroke="bisque" fill="transparent" stroke-width="2" />
+  <circle cx="25" cy="75" r="10" stroke="red" fill="transparent" />
+  <ellipse cx="75" cy="75" rx="20" ry="10" />
+  <line x1="100" x2="200" y1="85" y2="85" stroke="antiquewhite" />
+  <polyline points="60 110 65 120 70 115 75 130 80 125 85 140 90 135 95 150 100 145" stroke="orange" fill="transparent"
+    stroke-width="5" />
+
+  <polygon points="50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180" stroke="green"
+    fill="transparent" stroke-width="5" />
+  <path d="M20,230 Q40,205 50,230 T90,230" fill="none" stroke="blue" stroke-width="5" />
+</svg>
