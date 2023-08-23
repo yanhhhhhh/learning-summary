@@ -28,46 +28,50 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.css$/,
-        use: getStyleLoaders(),
-      },
-      {
-        test: /\.less$/,
-        use: getStyleLoaders("less-loader"),
-      },
-      {
-        test: /\.s[ac]ss$/,
-        use: getStyleLoaders("sass-loader"),
-      },
-      {
-        test: /\.styl/,
-        use: getStyleLoaders("stylus-loader"),
-      },
-      {
-        test: /\.(png|jpe?g|gif|webp)$/,
-        //webpack 将按照默认条件，自动地在 resource 和 inline 之间进行选择：小于 8kb 的文件，将会视为 inline 模块类型，否则会被视为 resource 模块类型。
-        type: "asset",
-        parser: {
-          dataUrlCondition: {
-            maxSize: 6 * 1024, //6kb
+        oneOf: [
+          {
+            test: /\.css$/,
+            use: getStyleLoaders(),
           },
-        },
-        generator: {
-          filename: "static/images/[hash:8][ext][query]",
-        },
-      },
-      {
-        test: /\.(ttf|woff2?|map4|map3|avi)$/,
-        type: "asset/resource",
+          {
+            test: /\.less$/,
+            use: getStyleLoaders("less-loader"),
+          },
+          {
+            test: /\.s[ac]ss$/,
+            use: getStyleLoaders("sass-loader"),
+          },
+          {
+            test: /\.styl/,
+            use: getStyleLoaders("stylus-loader"),
+          },
+          {
+            test: /\.(png|jpe?g|gif|webp)$/,
+            //webpack 将按照默认条件，自动地在 resource 和 inline 之间进行选择：小于 8kb 的文件，将会视为 inline 模块类型，否则会被视为 resource 模块类型。
+            type: "asset",
+            parser: {
+              dataUrlCondition: {
+                maxSize: 6 * 1024, //6kb
+              },
+            },
+            generator: {
+              filename: "static/images/[hash:8][ext][query]",
+            },
+          },
+          {
+            test: /\.(ttf|woff2?|map4|map3|avi)$/,
+            type: "asset/resource",
 
-        generator: {
-          filename: "static/fonts/[hash:8][ext][query]",
-        },
-      },
-      {
-        test: /\.js$/,
-        loader: "babel-loader", // 排除node_modules代码不编译
-        exclude: "/node_modules/",
+            generator: {
+              filename: "static/fonts/[hash:8][ext][query]",
+            },
+          },
+          {
+            test: /\.js$/,
+            loader: "babel-loader", // 排除node_modules代码不编译
+            exclude: "/node_modules/",
+          },
+        ],
       },
     ],
   },
@@ -86,4 +90,5 @@ module.exports = {
     new CssMinimizerPlugin(), //css压缩
   ],
   mode: "production",
+  devtool: "source-map",
 };
